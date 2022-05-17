@@ -27,7 +27,7 @@ export const FeedContextProvider = ({ children }) => {
         fetch(url, options)
             .then((response) => response.json())
             .then((data) => {
-                console.log(data.data.feed);
+                //console.log(data.data.feed);
                 setFeed(data.data.feed); 
                 setLoaded(true);
             });
@@ -57,14 +57,14 @@ export const FeedContextProvider = ({ children }) => {
                 setFeed(prevFeed => prevFeed.map(photo => photo.id === postId ?
                     {
                         ...photo,
-                        likes: photo.likes, data
+                        likes: [...photo.likes, data]
                     }
                     :
                     photo
                     )
                 )
                 console.log(data);
-            });
+            })
     }
     
     return (

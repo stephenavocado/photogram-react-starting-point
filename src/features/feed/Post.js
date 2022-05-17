@@ -11,12 +11,12 @@ export default function Post({ post }) {
 
     useEffect(() => {
         setLikes(prevLikes => prevLikes + 1);
-    }, [like])
+    }, [post])
 
     return (
         <div className="post-wrapper">
             <h3 className="post-header">
-                username
+                username {JSON.stringify(post)}
             </h3>
             <div className="post-image-wrapper">
                 <img className="post-image" src={image} />
@@ -24,7 +24,7 @@ export default function Post({ post }) {
             <div className="post-likes-row">
                 {likes} {likes === 1 ? "like" : "likes"}
                 <div 
-                    onClick={() => like(post.id, currentUser.user.id)} 
+                    onClick={() => {!liked && like(post.id, currentUser.user.id)}} 
                     className="post-like-button"
                 >
                     {liked ? "❤️ Un-like" : "🤍 Like"}

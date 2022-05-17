@@ -52,7 +52,7 @@ export const AuthenticationContextProvider = ({ children }) => {
         fetch(url, options)
             .then((response) => response.json())
             .then((data) => {
-                console.log(data);
+                //console.log(data);
                 setCurrentUser(data);
             });
     };
