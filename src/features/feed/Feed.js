@@ -1,20 +1,9 @@
-import React, { useContext, useEffect } from "react";
-import { FeedContext } from "../../services/feed/feed.context";
-import { AuthenticationContext } from "../../services/authentication/authentication.context";
+import React, { useState } from "react";
 import Post from "./Post";
+import data from "../feed/data/data";
 
 export default function Feed() {
-    const { feed, getFeed, loaded } = useContext(FeedContext);
-    const { currentUser } = useContext(AuthenticationContext);
-    const { id } = currentUser.user;
- 
-    useEffect(() => {
-        getFeed(id);
-    }, [feed.length])
-
-    if (!loaded) {
-        return
-    };
+    const [feed, setFeed] = useState(data);
 
     const posts = feed.map((post) => {
         return (
