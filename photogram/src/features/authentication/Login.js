@@ -5,8 +5,8 @@ export default function Login() {
     const { currentUser, credentials, handleInput, loginRequest } = useContext(AuthenticationContext);
     
     return (
-        <div>
-            <div>Login {currentUser}</div>
+        <div className="page-wrapper">
+            <h1>Login {currentUser}</h1>
             <form className="form-wrapper">
                 <input  
                     className="form-input"   

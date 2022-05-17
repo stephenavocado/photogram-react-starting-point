@@ -11,3 +11,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post-wrapper {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  padding: 16px;
+  width: 500px;
+}
+
+.post-image-wrapper {
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+.post-image {
+  width: 100%;
+}
+
+.post-likes-row {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.post-like-button.pointer {
+  cursor: pointer;
+} 
+
+.post-caption {
+  font-size: 14px;
+  margin-top: 24px;
+}
