@@ -1,8 +1,8 @@
 import React from "react";
-import { Navigation } from "./navigation/navigation";
+import Feed from "./features/feed/Feed";
 
 export default function App() {
   return (
-      <Navigation />
+      <Feed />
   );
 };
